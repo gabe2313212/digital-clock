@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - Multiple Time Zones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🕐 World Clock</h1>
+            <p>Real-time display across time zones</p>
+        </header>
+
+        <div class="controls">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="timezoneSearch" 
+                    placeholder="Search for a timezone (e.g., 'New York', 'Tokyo')..."
+                    class="search-input"
+                >
+                <button id="addBtn" class="btn btn-add">+ Add Timezone</button>
+            </div>
+
+            <div class="quick-add">
+                <h3>Quick Add:</h3>
+                <div class="quick-buttons">
+                    <button class="btn btn-quick" onclick="addTimezone('America/New_York')">New York</button>
+                    <button class="btn btn-quick" onclick="addTimezone('Europe/London')">London</button>
+                    <button class="btn btn-quick" onclick="addTimezone('Asia/Tokyo')">Tokyo</button>
+                    <button class="btn btn-quick" onclick="addTimezone('Australia/Sydney')">Sydney</button>
+                    <button class="btn btn-quick" onclick="addTimezone('Asia/Dubai')">Dubai</button>
+                    <button class="btn btn-quick" onclick="addTimezone('Europe/Paris')">Paris</button>
+                    <button class="btn btn-quick" onclick="addTimezone('Asia/Singapore')">Singapore</button>
+                    <button class="btn btn-quick" onclick="addTimezone('America/Los_Angeles')">Los Angeles</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="timezones-grid" id="timezonesGrid">
+            <!-- Clocks will be added here dynamically -->
+        </div>
+
+        <div class="empty-state" id="emptyState">
+            <p>👇 Select a timezone above to get started</p>
+        </div>
+    </div>
+
+    <script src="timezones.js"></script>
+    <script src="clock.js"></script>
+</body>
+</html>
